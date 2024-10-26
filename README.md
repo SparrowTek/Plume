@@ -1,4 +1,4 @@
-# Atprosphere
+# Sparro Blu
 A native At Protocol app for iOS developed with Swift and SwiftUI
 
 ## Project State
