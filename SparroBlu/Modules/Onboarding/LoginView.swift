@@ -22,7 +22,7 @@ struct LoginView: View {
     @State private var server: OnboardingState.Server = .bluesky
     
     
-    @Query private var sessions: [ACSession]
+    @Query private var sessions: [SBSession]
     
     enum FocusedField {
         case username, password

@@ -14,10 +14,10 @@ import AtProtocol
 fileprivate struct SampleDataTimeline: PreviewModifier {
     
     static func makeSharedContext() throws -> ModelContainer {
-        let container = try ModelContainer(for: ACTimeline.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        let container = try ModelContainer(for: SBTimeline.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
         
         if let timeline: Timeline = object(resourceName: "timeline") {
-            let acTimeline = ACTimeline(feed: timeline.feed, cursor: timeline.cursor, session: nil)
+            let acTimeline = SBTimeline(feed: timeline.feed, cursor: timeline.cursor, session: nil)
             container.mainContext.insert(acTimeline)
         }
         
@@ -32,7 +32,7 @@ fileprivate struct SampleDataTimeline: PreviewModifier {
 
 fileprivate struct SampleDataSession: PreviewModifier {
     static func makeSharedContext() async throws -> ModelContainer {
-        let container = try ModelContainer(for: ACSession.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        let container = try ModelContainer(for: SBSession.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
         
         return container
     }

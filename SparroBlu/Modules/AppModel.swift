@@ -11,7 +11,7 @@ import SwiftData
 fileprivate struct AppModelViewModifier: ViewModifier {
     @Environment(AppState.self) private var state
     @Environment(Services.self) private var services
-    @Query private var sessions: [ACSession]
+    @Query private var sessions: [SBSession]
     @State private var checkLoginStatusTrigger = PlainTaskTrigger()
     @AppStorage(Constants.UserDefaults.currentSessionDid) private var currentSessionDid: String?
     @AppStorage(Constants.UserDefaults.hostURL) private var hostURL: String?

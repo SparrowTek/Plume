@@ -20,7 +20,7 @@ import SwiftData
 //    public var type: String
 //    @Relationship(deleteRule: .cascade, inverse: \ACFeed.preferences) public var saved: [ACFeed] = []
 //    @Relationship(deleteRule: .cascade, inverse: \ACFeed.preferences) public var pinned: [ACFeed] = []
-//    public var session: ACSession?
+//    public var session: SBSession?
 //    
 //    init(did: String, type: String) {
 //        self.did = did

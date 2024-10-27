@@ -54,7 +54,7 @@ actor ServicesModelActor {
     }
     
     private func getProfile(for sessionID: PersistentIdentifier) async {
-//        guard let session = modelContext.model(for: sessionID) as? ACSession,
+//        guard let session = modelContext.model(for: sessionID) as? SBSession,
 //              let profile = try? await AtProtocol.BskyLexicons().getProfile(for: session.did) else { return }
 //        let acProfile = ACProfile(did: profile.did, handle: profile.handle, displayName: profile.displayName, profileDescription: profile.description, avatar: profile.avatar, banner: profile.banner, followsCount: profile.followsCount, followersCount: profile.followersCount, postsCount: profile.postsCount, indexedAt: profile.indexedAt, viewer: profile.viewer, labels: profile.labels)
 //        modelContext.insert(acProfile)
@@ -65,7 +65,7 @@ actor ServicesModelActor {
     }
     
     func setupMyProfile() async {
-//        guard let sessions = try? modelContext.fetch(FetchDescriptor<ACSession>()),
+//        guard let sessions = try? modelContext.fetch(FetchDescriptor<SBSession>()),
 //              let session = sessions.first else { return }
 //        let sessionID = session.id
 //        
@@ -94,7 +94,7 @@ actor ServicesModelActor {
     }
     
     private func getPreferences(for sessionID: PersistentIdentifier) async  {
-//        guard let session = modelContext.model(for: sessionID) as? ACSession,
+//        guard let session = modelContext.model(for: sessionID) as? SBSession,
 //              let preferences = try? await AtProtocol.BskyLexicons().getPreferences(), let preferences = preferences.preferences.first else { return }
 //        
 //        let saved: [String] = preferences.saved
@@ -119,10 +119,10 @@ actor ServicesModelActor {
 //    }
     
     func getTimeline(for sessionID: PersistentIdentifier, limit: Int) async {
-        guard let session = modelContext.model(for: sessionID) as? ACSession,
+        guard let session = modelContext.model(for: sessionID) as? SBSession,
               let timeline = try? await AtProtocol.BskyLexicons().getTimeline(limit: limit) else { return }
         
-        let acTimeline = ACTimeline(feed: timeline.feed, cursor: timeline.cursor, session: session)
+        let acTimeline = SBTimeline(feed: timeline.feed, cursor: timeline.cursor, session: session)
         modelContext.insert(acTimeline)
         try? modelContext.save()
     }
@@ -140,7 +140,7 @@ actor ServicesModelActor {
     
     func logout() async throws {
         guard let did = currentSessionDid else { return }
-        let sessions = try modelContext.fetch(FetchDescriptor<ACSession>(predicate: #Predicate { $0.did == did }))
+        let sessions = try modelContext.fetch(FetchDescriptor<SBSession>(predicate: #Predicate { $0.did == did }))
         guard let currentSession = sessions.first else { return }
         modelContext.delete(currentSession)
         try? modelContext.save()
@@ -151,12 +151,12 @@ actor ServicesModelActor {
     }
     
     private func updateSession(did: String, handle: String, email: String?, accessJwt: String?, refreshJwt: String?) async throws {
-        let acSession: ACSession
+        let acSession: SBSession
         
-        if let storedSession = try modelContext.fetch(FetchDescriptor<ACSession>(predicate: #Predicate { $0.did == did })).first {
+        if let storedSession = try modelContext.fetch(FetchDescriptor<SBSession>(predicate: #Predicate { $0.did == did })).first {
             acSession = storedSession
         } else {
-            acSession = ACSession(did: did, handle: handle, email: email)
+            acSession = SBSession(did: did, handle: handle, email: email)
             modelContext.insert(acSession)
         }
         

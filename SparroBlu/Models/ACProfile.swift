@@ -31,7 +31,7 @@
 //        public var viewer: Viewer
 //        public var labels: [String]
 //        @Attribute(.externalStorage) public var avatarOnDisk: Data?
-//        public var session: ACSession?
+//        public var session: SBSession?
 //        
 //        public init(did: String, handle: String, displayName: String, profileDescription: String, avatar: String, banner: String, followsCount: Int, followersCount: Int, postsCount: Int, indexedAt: Date, viewer: Viewer, labels: [String]) {
 //            self.did = did

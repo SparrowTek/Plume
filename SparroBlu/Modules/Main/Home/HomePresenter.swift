@@ -47,8 +47,8 @@ struct HomePresenter: View {
 struct HomeView: View {
     @Environment(HomeState.self) private var state
     @Environment(Services.self) private var services
-    @Query private var sessions: [ACSession]
-    @Query private var timelines: [ACTimeline]
+    @Query private var sessions: [SBSession]
+    @Query private var timelines: [SBTimeline]
 
     var body: some View {
         TimelineListView(timelines: timelines)
@@ -82,7 +82,7 @@ struct HomeView: View {
 
 fileprivate struct HomeFeedFilter: View {
     @Environment(HomeState.self) private var state
-    @Query private var sessions: [ACSession]
+    @Query private var sessions: [SBSession]
 //    @Query private var feeds: [ACFeed]
 //    @State private var feed: ACFeed?
     @AppStorage(Constants.UserDefaults.currentSessionDid) private var currentSessionDid: String?

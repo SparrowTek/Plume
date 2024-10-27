@@ -1,5 +1,5 @@
 //
-//  ATModel.swift
+//  SBModel.swift
 //  SparroBlu
 //
 //  Created by Thomas Rademaker on 9/1/23.
@@ -11,7 +11,7 @@ import SwiftData
 //public typealias ACFeed = ACFeedSchemaV1.ACFeed
 //public typealias ACPreferences = ACPreferencesSchemaV1.ACPreferences
 //public typealias ACProfile = ACProfileSchemaV1.ACProfile
-//public typealias ACSession = ACSessionSchemaV1.ACSession
+//public typealias SBSession = ACSessionSchemaV1.SBSession
 //public typealias ACTimeline = ACTimelineSchemaV1.ACTimeline
 //public typealias ACModel = ACModelSchemaV1.ACModel
 
@@ -19,7 +19,7 @@ import SwiftData
 //    public static var versionIdentifier = Schema.Version(1, 0, 0)
 //    
 //    public static var models: [any PersistentModel.Type] {
-//        [ACSession.self]
+//        [SBSession.self]
 //    }
 //    
 //    @Model
@@ -34,7 +34,7 @@ import SwiftData
 ////        ACFeed.self,
 ////        ACPreferences.self,
 ////        ACProfile.self,
-//        ACSession.self,
+//        SBSession.self,
 ////        ACTimeline.self,
 //    ])
 //}
@@ -52,8 +52,8 @@ import SwiftData
 struct SparroBluDataContainerViewModifier: ViewModifier {
     let container: ModelContainer
     let schema = Schema([
-        ACSession.self,
-        ACTimeline.self,
+        SBSession.self,
+        SBTimeline.self,
 //        ACFeed.self,
     ])
     
@@ -73,7 +73,7 @@ struct SparroBluDataContainerViewModifier: ViewModifier {
 }
 
 public extension View {
-    func setupModel(inMemory: Bool = ACModelOptions.inMemoryPersistence) -> some View {
+    func setupModel(inMemory: Bool = SBModelOptions.inMemoryPersistence) -> some View {
         modifier(SparroBluDataContainerViewModifier(inMemory: inMemory))
     }
 }

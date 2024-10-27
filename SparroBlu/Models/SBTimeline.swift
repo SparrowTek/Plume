@@ -12,9 +12,9 @@ import AtProtocol
 //    public class ACTimeline {
 //        public var feed: [TimelineItem]
 //        public var cursor: String
-//        public var session: ACSession?
+//        public var session: SBSession?
 //        
-//        init(feed: [TimelineItem], cursor: String, session: ACSession?) {
+//        init(feed: [TimelineItem], cursor: String, session: SBSession?) {
 //            self.feed = feed
 //            self.cursor = cursor
 //            self.session = session
@@ -23,12 +23,12 @@ import AtProtocol
 //}
 
 @Model
-class ACTimeline {
+class SBTimeline {
     var feed: [TimelineItem]
     var cursor: String
-    var session: ACSession?
+    var session: SBSession?
     
-    init(feed: [TimelineItem], cursor: String, session: ACSession? = nil) {
+    init(feed: [TimelineItem], cursor: String, session: SBSession? = nil) {
         self.feed = feed
         self.cursor = cursor
         self.session = session

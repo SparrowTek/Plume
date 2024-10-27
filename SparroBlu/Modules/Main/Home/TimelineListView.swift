@@ -13,7 +13,7 @@ struct TimelineListView: View {
     @Environment(HomeState.self) private var state
     @AppStorage(Constants.UserDefaults.currentSessionDid) private var currentSessionDid: String?
     @Namespace private var topID
-    var timelines: [ACTimeline]
+    var timelines: [SBTimeline]
     
     var body: some View {
         @Bindable var state = state
@@ -366,7 +366,7 @@ fileprivate struct BoostedByView: View {
 
 #if DEBUG
 #Preview(traits: .sampleTimeline) {
-    @Previewable @Query var timelines: [ACTimeline]
+    @Previewable @Query var timelines: [SBTimeline]
     
     TimelineListView(timelines: timelines)
         .environment(HomeState(parentState: .init()))

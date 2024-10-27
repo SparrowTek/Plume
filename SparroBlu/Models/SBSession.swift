@@ -1,5 +1,5 @@
 //
-//  ACSession.swift
+//  SBSession.swift
 //  SparroBlu
 //
 //  Created by Thomas Rademaker on 9/1/23.
@@ -39,7 +39,7 @@ public enum ACSessionSchemaV1: VersionedSchema {
 }*/
 
 @Model
-public class ACSession {
+public class SBSession {
     @Attribute(.unique) public var did: String
     public var handle: String
     public var email: String?
@@ -58,7 +58,7 @@ public class ACSession {
     }
 }
 /*
-extension ACSession {
+extension SBSession {
     @discardableResult
     public static func update(did: String, handle: String, email: String?, accessJwt: String?, refreshJwt: String?) -> PersistentIdentifier? {
         do {
@@ -67,12 +67,12 @@ extension ACSession {
             guard let state = try context.fetch(FetchDescriptor<ACState>()).first else { return nil }
             state.currentSessionDid = did
             
-            let acSession: ACSession
+            let acSession: SBSession
             
-            if let storedSession = try context.fetch(FetchDescriptor<ACSession>(predicate: #Predicate { $0.did == did })).first {
+            if let storedSession = try context.fetch(FetchDescriptor<SBSession>(predicate: #Predicate { $0.did == did })).first {
                 acSession = storedSession
             } else {
-                acSession = ACSession(did: did, handle: handle, email: email)
+                acSession = SBSession(did: did, handle: handle, email: email)
                 context.insert(acSession)
             }
             
@@ -93,7 +93,7 @@ extension ACSession {
         }
     }
     
-    public static var current: ACSession? {
+    public static var current: SBSession? {
         let context = ModelContext(ACModel.shared.container)
         let did = ACState.current.currentSessionDid
         guard let session = try? context.fetch(FetchDescriptor<ACSession>(predicate: #Predicate { $0.did == did })).first else { return nil }

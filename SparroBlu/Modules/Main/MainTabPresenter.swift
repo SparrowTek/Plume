@@ -12,7 +12,7 @@ struct MainTabPresenter: View {
     @Environment(AppState.self) private var state
     @State private var triggerSensoryFeedback = false
 //    @Query private var profiles: [ACProfile]
-//    @Query private var sessions: [ACSession]
+//    @Query private var sessions: [SBSession]
     
     var body: some View {
         @Bindable var state = state
