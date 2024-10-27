@@ -46,9 +46,12 @@ struct HomePresenter: View {
 
 struct HomeView: View {
     @Environment(HomeState.self) private var state
+    @Environment(Services.self) private var services
+    @Query private var sessions: [ACSession]
+    @Query private var timelines: [ACTimeline]
 
     var body: some View {
-        TimelineListView()
+        TimelineListView(timelines: timelines)
             .navBar()
             .fullScreenColorView()
             .navigationBarTitleDisplayMode(.inline)
@@ -63,6 +66,12 @@ struct HomeView: View {
                     HomeFeedFilter()
                 }
             }
+            .task { await getTimeline() }
+    }
+    
+    private func getTimeline() async {
+        guard let session = sessions.first else { return }
+        await services.run.getTimeline(for: session.id, limit: 30)
     }
     
     private func openSettings() {

@@ -11,11 +11,9 @@ import AtProtocol
 
 struct TimelineListView: View {
     @Environment(HomeState.self) private var state
-    @Environment(Services.self) private var services
     @AppStorage(Constants.UserDefaults.currentSessionDid) private var currentSessionDid: String?
-    @Query private var sessions: [ACSession]
-    @Query private var timelines: [ACTimeline]
     @Namespace private var topID
+    var timelines: [ACTimeline]
     
     var body: some View {
         @Bindable var state = state
@@ -26,13 +24,7 @@ struct TimelineListView: View {
         }
         .scrollableToTop(scrollToTop: $state.scrollToTop, topID: topID)
         .listStyle(.plain)
-        .task { await getTimeline() }
         .fullScreenColorView()
-    }
-    
-    private func getTimeline() async {
-        guard let session = sessions.first else { return }
-        await services.run.getTimeline(for: session.id, limit: 30)
     }
 }
 
@@ -374,7 +366,9 @@ fileprivate struct BoostedByView: View {
 
 #if DEBUG
 #Preview(traits: .sampleTimeline) {
-    TimelineListView()
+    @Previewable @Query var timelines: [ACTimeline]
+    
+    TimelineListView(timelines: timelines)
         .environment(HomeState(parentState: .init()))
         .setupServices()
 }
