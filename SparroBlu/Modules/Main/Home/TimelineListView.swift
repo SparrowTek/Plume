@@ -90,6 +90,36 @@ fileprivate struct PostCell: View {
     private func openProfile() {
         state.path.append(.profile)
     }
+    
+    // TODO: urls property and convertToMarkdown method do not work
+    private var urls: [String] {
+        timelineItem.post.facets?.facets.flatMap {
+            $0.features.compactMap { $0.uri }
+        } ?? []
+    }
+    
+    private func convertToMarkdown(original: String, fullURLs: [String]) -> String {
+        var updatedString = original
+        
+        for fullURL in fullURLs {
+            // Extract the base URL path from the full URL
+            guard let baseURL = URL(string: fullURL)?.path else {
+                continue
+            }
+            
+            // Find the range of the base URL in the original string
+            if let range = updatedString.range(of: baseURL) {
+                // Convert the range to an NSRange
+                let nsRange = NSRange(range, in: updatedString)
+                
+                // Replace the base URL with the markdown link
+                let markdownLink = "[\(updatedString[range])](\(fullURL))"
+                updatedString = (updatedString as NSString).replacingCharacters(in: nsRange, with: markdownLink)
+            }
+        }
+        
+        return updatedString
+    }
 }
 
 fileprivate struct EmbedView: View {
