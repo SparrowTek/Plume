@@ -35,4 +35,5 @@ struct AppPresenter: View {
 #Preview {
     AppPresenter()
         .environment(AppState())
+        .setupServices()
 }
