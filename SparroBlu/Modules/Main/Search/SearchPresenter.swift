@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SearchPresenter: View {
     var body: some View {
-        SearchView()
+        NavigationStack {
+            SearchView()
+        }
     }
 }
 
