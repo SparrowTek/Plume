@@ -1,0 +1,124 @@
+{
+  "did": "did:plc:ucct3fwwarzd7rety6nzq4cc",
+  "handle": "bcantrill.bsky.social",
+  "displayName": "Bryan Cantrill",
+  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ucct3fwwarzd7rety6nzq4cc/bafkreibajqtfkfkb7tkctsl42q747tekfc4yuek5dhjbe7plc24c7b3rti@jpeg",
+  "associated": {
+    "lists": 1,
+    "feedgens": 0,
+    "starterPacks": 0,
+    "labeler": false,
+    "chat": {
+      "allowIncoming": "all"
+    }
+  },
+  "viewer": {
+    "muted": false,
+    "blockedBy": false,
+    "knownFollowers": {
+      "count": 13,
+      "followers": [
+        {
+          "did": "did:plc:3n5xhy6vl7smssmwxq5wgqa6",
+          "handle": "gergely.pragmaticengineer.com",
+          "displayName": "Gergely Orosz",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3n5xhy6vl7smssmwxq5wgqa6/bafkreiff6ltslguxeg43g7etxnkhbetuzsvrkxonbpq6cle22k3xmsv5oi@jpeg",
+          "associated": {
+            "chat": {
+              "allowIncoming": "all"
+            }
+          },
+          "viewer": {
+            "muted": false,
+            "blockedBy": false,
+            "following": "at://did:plc:aq5iwu4gjdcg2hq53llism3x/app.bsky.graph.follow/3l7uzr7armj2p",
+            "followedBy": "at://did:plc:3n5xhy6vl7smssmwxq5wgqa6/app.bsky.graph.follow/3l7trnvjhpz2j"
+          },
+          "labels": [],
+          "createdAt": "2023-04-26T13:26:43.113Z"
+        },
+        {
+          "did": "did:plc:ragtjsm2j2vknwkz3zp4oxrd",
+          "handle": "pfrazee.com",
+          "displayName": "Paul Frazee",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ragtjsm2j2vknwkz3zp4oxrd/bafkreihhpqdyntku66himwor5wlhtdo44hllmngj2ofmbqnm25bdm454wq@jpeg",
+          "associated": {
+            "chat": {
+              "allowIncoming": "following"
+            }
+          },
+          "viewer": {
+            "muted": false,
+            "blockedBy": false,
+            "following": "at://did:plc:aq5iwu4gjdcg2hq53llism3x/app.bsky.graph.follow/3l3smoghcdd27"
+          },
+          "labels": [],
+          "createdAt": "2022-11-17T00:35:16.391Z"
+        },
+        {
+          "did": "did:plc:oky5czdrnfjpqslsw2a5iclo",
+          "handle": "jay.bsky.team",
+          "displayName": "Jay 🦋",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oky5czdrnfjpqslsw2a5iclo/bafkreihidru2xruxdxlvvcixc7lbgoudzicjbrdgacdhdhxyfw4yut4nfq@jpeg",
+          "associated": {
+            "chat": {
+              "allowIncoming": "following"
+            }
+          },
+          "viewer": {
+            "muted": false,
+            "blockedBy": false,
+            "following": "at://did:plc:aq5iwu4gjdcg2hq53llism3x/app.bsky.graph.follow/3jyu3kytpf62x",
+            "followedBy": "at://did:plc:oky5czdrnfjpqslsw2a5iclo/app.bsky.graph.follow/3l37whajamg26"
+          },
+          "labels": [],
+          "createdAt": "2022-11-17T06:31:40.296Z"
+        },
+        {
+          "did": "did:plc:7i3fhorekojhdjhkbln7q7gq",
+          "handle": "kelseyhightower.com",
+          "displayName": "Kelsey Hightower",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7i3fhorekojhdjhkbln7q7gq/bafkreidc3secznbt2u5bcwcaownwvgd57jefnprxgtrvmlyli3dho5kpom@jpeg",
+          "associated": {
+            "chat": {
+              "allowIncoming": "following"
+            }
+          },
+          "viewer": {
+            "muted": false,
+            "blockedBy": false,
+            "following": "at://did:plc:aq5iwu4gjdcg2hq53llism3x/app.bsky.graph.follow/3l6zsyqqafe2x"
+          },
+          "labels": [],
+          "createdAt": "2023-04-21T19:04:37.997Z"
+        },
+        {
+          "did": "did:plc:tpg43qhh4lw4ksiffs4nbda3",
+          "handle": "jacob.gold",
+          "displayName": "Jake Gold",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tpg43qhh4lw4ksiffs4nbda3/bafkreiems5id4gwiko7s3gffilosjowemvtse2p3uq6wrh62gogskp5vci@jpeg",
+          "associated": {
+            "chat": {
+              "allowIncoming": "all"
+            }
+          },
+          "viewer": {
+            "muted": false,
+            "blockedBy": false,
+            "following": "at://did:plc:aq5iwu4gjdcg2hq53llism3x/app.bsky.graph.follow/3k6q7jb5t442v"
+          },
+          "labels": [],
+          "createdAt": "2023-01-04T18:08:01.779Z"
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "createdAt": "2023-04-28T19:23:12.519Z",
+  "description": "Co-founder and CTO of Oxide Computer Company. According to Field of Schemes, \"tech exec and Oakland A's fan\" -- but more of an Oakland Ballers fan now.",
+  "indexedAt": "2024-10-06T20:07:57.043Z",
+  "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:ucct3fwwarzd7rety6nzq4cc/bafkreihoidfc26k22zqn5ksawctzkwgtnyhok6kipbvqxdz732elv5a57i@jpeg",
+  "followersCount": 3508,
+  "followsCount": 208,
+  "postsCount": 76
+}

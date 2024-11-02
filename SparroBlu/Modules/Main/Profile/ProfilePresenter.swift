@@ -14,13 +14,31 @@ struct ProfilePresenter: View {
 }
 
 struct ProfileView: View {
+    
     var body: some View {
-        UnderConstructionView()
-            .navBar()
-            .fullScreenColorView()
+        VStack(spacing: 0) {
+            ProfileHeaderView()
+            TimelineListView(timelines: [])
+        }
+        .navBar()
+        .fullScreenColorView()
+    }
+    
+    private func getProfile() {
+        
     }
 }
 
-#Preview {
-    ProfilePresenter()
+fileprivate struct ProfileHeaderView: View {
+    var body: some View {
+        Text("header")
+            .ignoresSafeArea()
+    }
 }
+
+#if DEBUG
+#Preview(traits: .sampleProfile, .sampleTimeline, .sampleSession) {
+    ProfilePresenter()
+        .environment(HomeState(parentState: .init()))
+}
+#endif

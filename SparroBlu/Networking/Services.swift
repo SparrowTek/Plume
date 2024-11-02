@@ -56,7 +56,7 @@ actor ServicesModelActor {
     private func getProfile(for sessionID: PersistentIdentifier) async {
 //        guard let session = modelContext.model(for: sessionID) as? SBSession,
 //              let profile = try? await AtProtocol.BskyLexicons().getProfile(for: session.did) else { return }
-//        let acProfile = ACProfile(did: profile.did, handle: profile.handle, displayName: profile.displayName, profileDescription: profile.description, avatar: profile.avatar, banner: profile.banner, followsCount: profile.followsCount, followersCount: profile.followersCount, postsCount: profile.postsCount, indexedAt: profile.indexedAt, viewer: profile.viewer, labels: profile.labels)
+//        let acProfile = SBProfile(did: profile.did, handle: profile.handle, displayName: profile.displayName, profileDescription: profile.description, avatar: profile.avatar, banner: profile.banner, followsCount: profile.followsCount, followersCount: profile.followersCount, postsCount: profile.postsCount, indexedAt: profile.indexedAt, viewer: profile.viewer, labels: profile.labels)
 //        modelContext.insert(acProfile)
 //        session.profile = acProfile
 //        try? modelContext.save()
@@ -79,7 +79,7 @@ actor ServicesModelActor {
     
     private func downloadMyAvatar(url: String, profileID: PersistentIdentifier) async {
 //        guard let url = URL(string: url),
-//            let profile = modelContext.model(for: profileID) as? ACProfile else { return }
+//            let profile = modelContext.model(for: profileID) as? SBProfile else { return }
 //        
 //        let request = URLRequest(url: url)
 //        guard let (data, response) = try? await URLSession.shared.data(for: request) else { return }

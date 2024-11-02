@@ -10,7 +10,7 @@ import SwiftData
 
 //public typealias ACFeed = ACFeedSchemaV1.ACFeed
 //public typealias ACPreferences = ACPreferencesSchemaV1.ACPreferences
-//public typealias ACProfile = ACProfileSchemaV1.ACProfile
+//public typealias SBProfile = ACProfileSchemaV1.SBProfile
 //public typealias SBSession = ACSessionSchemaV1.SBSession
 //public typealias ACTimeline = ACTimelineSchemaV1.ACTimeline
 //public typealias ACModel = ACModelSchemaV1.ACModel
@@ -33,7 +33,7 @@ import SwiftData
 ////        ACModel.self,
 ////        ACFeed.self,
 ////        ACPreferences.self,
-////        ACProfile.self,
+////        SBProfile.self,
 //        SBSession.self,
 ////        ACTimeline.self,
 //    ])
@@ -54,6 +54,7 @@ struct SparroBluDataContainerViewModifier: ViewModifier {
     let schema = Schema([
         SBSession.self,
         SBTimeline.self,
+        SBProfile.self,
 //        ACFeed.self,
     ])
     

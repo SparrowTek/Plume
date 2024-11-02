@@ -11,7 +11,7 @@ import SwiftData
 struct MainTabPresenter: View {
     @Environment(AppState.self) private var state
     @State private var triggerSensoryFeedback = false
-//    @Query private var profiles: [ACProfile]
+//    @Query private var profiles: [SBProfile]
 //    @Query private var sessions: [SBSession]
     
     var body: some View {

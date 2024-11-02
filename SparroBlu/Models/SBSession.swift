@@ -23,11 +23,11 @@ public enum ACSessionSchemaV1: VersionedSchema {
 //        public var handle: String
 //        public var email: String?
 //        
-////        @Relationship(deleteRule: .cascade, inverse: \ACProfile.session) public var profile: ACProfile?
+////        @Relationship(deleteRule: .cascade, inverse: \SBProfile.session) public var profile: SBProfile?
 ////        @Relationship(deleteRule: .cascade, inverse: \ACPreferences.session) public var preferences: ACPreferences?
 ////        @Relationship(deleteRule: .cascade, inverse: \ACTimeline.session) public var timeline: ACTimeline?
 //        
-//        init(did: String, handle: String, email: String? = nil/*, profile: ACProfile? = nil, preferences: ACPreferences? = nil, timeline: ACTimeline? = nil*/) {
+//        init(did: String, handle: String, email: String? = nil/*, profile: SBProfile? = nil, preferences: ACPreferences? = nil, timeline: ACTimeline? = nil*/) {
 //            self.did = did
 //            self.handle = handle
 //            self.email = email
@@ -44,11 +44,11 @@ public class SBSession {
     public var handle: String
     public var email: String?
     
-//        @Relationship(deleteRule: .cascade, inverse: \ACProfile.session) public var profile: ACProfile?
+//        @Relationship(deleteRule: .cascade, inverse: \SBProfile.session) public var profile: SBProfile?
 //        @Relationship(deleteRule: .cascade, inverse: \ACPreferences.session) public var preferences: ACPreferences?
 //        @Relationship(deleteRule: .cascade, inverse: \ACTimeline.session) public var timeline: ACTimeline?
     
-    init(did: String, handle: String, email: String? = nil/*, profile: ACProfile? = nil, preferences: ACPreferences? = nil, timeline: ACTimeline? = nil*/) {
+    init(did: String, handle: String, email: String? = nil/*, profile: SBProfile? = nil, preferences: ACPreferences? = nil, timeline: ACTimeline? = nil*/) {
         self.did = did
         self.handle = handle
         self.email = email

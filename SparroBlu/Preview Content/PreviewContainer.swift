@@ -42,6 +42,23 @@ fileprivate struct SampleDataSession: PreviewModifier {
     }
 }
 
+fileprivate struct SampleDataProfile: PreviewModifier {
+    static func makeSharedContext() async throws -> ModelContainer {
+        let container = try ModelContainer(for: SBProfile.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        if let profile: Profile = object(resourceName: "profile") {
+            let sbProfile = SBProfile(profile)
+            container.mainContext.insert(sbProfile)
+        }
+        
+        try container.mainContext.save()
+        return container
+    }
+    
+    func body(content: Content, context: ModelContainer) -> some View {
+        content.modelContainer(context)
+    }
+}
+
 //fileprivate struct SampleDataFeeds: PreviewModifier {
 //    static func makeSharedContext() async throws -> ModelContainer {
 //        let container = try ModelContainer(for: ACFeed.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
@@ -61,6 +78,7 @@ fileprivate struct SampleDataSession: PreviewModifier {
 extension PreviewTrait where T == Preview.ViewTraits {
     @MainActor static var sampleTimeline: Self = .modifier(SampleDataTimeline())
     @MainActor static var sampleSession: Self = .modifier(SampleDataSession())
+    @MainActor static var sampleProfile: Self = .modifier(SampleDataProfile())
 //    @MainActor static var sampleFeeds: Self = .modifier(SampleDataFeeds())
 }
 
