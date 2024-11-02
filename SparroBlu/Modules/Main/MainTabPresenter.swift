@@ -123,5 +123,6 @@ struct MainTabPresenter: View {
 #Preview(traits: .sampleTimeline) {
     MainTabPresenter()
         .environment(AppState())
+        .setupServices()
 }
 #endif
