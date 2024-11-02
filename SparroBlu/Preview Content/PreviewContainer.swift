@@ -87,7 +87,7 @@ fileprivate func object<c: Codable>(resourceName: String) -> c? {
           let data = try? Data(contentsOf: file) else { return nil }
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
-    return try? decoder.decode(c.self, from: data)
+    return try? decoder.decode(c.self, from: data)q
 }
 
 #endif

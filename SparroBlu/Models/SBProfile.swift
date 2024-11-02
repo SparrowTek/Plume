@@ -20,7 +20,7 @@ public class SBProfile {
     public var followsCount: Int
     public var followersCount: Int
     public var postsCount: Int
-    public var indexedAt: Date
+    public var indexedAt: String
     public var viewer: Viewer
     public var labels: [String]
     @Attribute(.externalStorage) public var avatarOnDisk: Data?
@@ -41,7 +41,7 @@ public class SBProfile {
         self.labels = profile.labels
     }
     
-    public init(did: String, handle: String, displayName: String, profileDescription: String, avatar: String, banner: String, followsCount: Int, followersCount: Int, postsCount: Int, indexedAt: Date, viewer: Viewer, labels: [String]) {
+    public init(did: String, handle: String, displayName: String, profileDescription: String, avatar: String, banner: String, followsCount: Int, followersCount: Int, postsCount: Int, indexedAt: String, viewer: Viewer, labels: [String]) {
         self.did = did
         self.handle = handle
         self.displayName = displayName

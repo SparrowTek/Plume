@@ -11,7 +11,6 @@ import AtProtocol
 
 struct TimelineListView: View {
     @Environment(HomeState.self) private var state
-    @AppStorage(Constants.UserDefaults.currentSessionDid) private var currentSessionDid: String?
     @Namespace private var topID
     var timelines: [SBTimeline]
     
