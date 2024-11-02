@@ -66,7 +66,8 @@ fileprivate struct PostCell: View {
                     .lineLimit(1)
                     .padding(.bottom, 2)
                     
-                    Text(timelineItem.post.record.text)
+//                    Text(timelineItem.post.record.text)
+                    Text(convertToMarkdown(original: timelineItem.post.record.text, fullURLs: urls))
                         .font(.system(size: 16))
                         .multilineTextAlignment(.leading)
                     
@@ -91,9 +92,8 @@ fileprivate struct PostCell: View {
         state.path.append(.profile)
     }
     
-    // TODO: urls property and convertToMarkdown method do not work
     private var urls: [String] {
-        timelineItem.post.facets?.facets.flatMap {
+        timelineItem.post.record.facets?.flatMap {
             $0.features.compactMap { $0.uri }
         } ?? []
     }
