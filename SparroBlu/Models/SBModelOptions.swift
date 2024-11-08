@@ -8,9 +8,10 @@
 import Foundation
 
 public class SBModelOptions {
-    #if DEBUG
     public static let inMemoryPersistence = true
-    #else
-    public static let inMemoryPersistence = false
-    #endif
+//    #if DEBUG
+//    public static let inMemoryPersistence = true
+//    #else
+//    public static let inMemoryPersistence = false
+//    #endif
 }
