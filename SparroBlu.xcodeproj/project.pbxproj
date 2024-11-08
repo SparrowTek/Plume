@@ -13,6 +13,7 @@
 		6C8C1B4B2CCBC5E100CB1E04 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 6C8C1B4A2CCBC5E100CB1E04 /* Nuke */; };
 		6C8C1B4D2CCBC5E100CB1E04 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 6C8C1B4C2CCBC5E100CB1E04 /* NukeExtensions */; };
 		6C8C1B4F2CCBC5E100CB1E04 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6C8C1B4E2CCBC5E100CB1E04 /* NukeUI */; };
+		6CCA24A12CDEC1F60075DCFF /* AtProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 6CCA24A02CDEC1F60075DCFF /* AtProtocol */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCA24A12CDEC1F60075DCFF /* AtProtocol in Frameworks */,
 				6C8C1B4F2CCBC5E100CB1E04 /* NukeUI in Frameworks */,
 				6C16B0AB2CD2DC7600202196 /* AtProtocol in Frameworks */,
 				6C8C1B4B2CCBC5E100CB1E04 /* Nuke in Frameworks */,
@@ -106,6 +108,7 @@
 				6C8C1B4C2CCBC5E100CB1E04 /* NukeExtensions */,
 				6C8C1B4E2CCBC5E100CB1E04 /* NukeUI */,
 				6C16B0AA2CD2DC7600202196 /* AtProtocol */,
+				6CCA24A02CDEC1F60075DCFF /* AtProtocol */,
 			);
 			productName = SparroBlu;
 			productReference = 6C8C1AB72CCBC42300CB1E04 /* SparroBlu.app */;
@@ -138,7 +141,7 @@
 			packageReferences = (
 				6C8C1B462CCBC5C600CB1E04 /* XCRemoteSwiftPackageReference "Vault" */,
 				6C8C1B492CCBC5E100CB1E04 /* XCRemoteSwiftPackageReference "Nuke" */,
-				6C16B0A92CD2DC7600202196 /* XCLocalSwiftPackageReference "../Frameworks/AtProtocol" */,
+				6CCA249F2CDEC1F60075DCFF /* XCRemoteSwiftPackageReference "AtProtocol" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6C8C1AB82CCBC42300CB1E04 /* Products */;
@@ -383,13 +386,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		6C16B0A92CD2DC7600202196 /* XCLocalSwiftPackageReference "../Frameworks/AtProtocol" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Frameworks/AtProtocol;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		6C8C1B462CCBC5C600CB1E04 /* XCRemoteSwiftPackageReference "Vault" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -405,6 +401,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 12.8.0;
+			};
+		};
+		6CCA249F2CDEC1F60075DCFF /* XCRemoteSwiftPackageReference "AtProtocol" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SparrowTek/AtProtocol.git";
+			requirement = {
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -437,6 +441,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6C8C1B492CCBC5E100CB1E04 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeUI;
+		};
+		6CCA24A02CDEC1F60075DCFF /* AtProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CCA249F2CDEC1F60075DCFF /* XCRemoteSwiftPackageReference "AtProtocol" */;
+			productName = AtProtocol;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
