@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C16B0AB2CD2DC7600202196 /* AtProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 6C16B0AA2CD2DC7600202196 /* AtProtocol */; };
-		6C6E5EF22D3866C7000A0C54 /* AtProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 6C6E5EF12D3866C7000A0C54 /* AtProtocol */; };
-		6C6E5EF52D3866F2000A0C54 /* AtProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 6C6E5EF42D3866F2000A0C54 /* AtProtocol */; };
-		6C8C1B452CCBC5B900CB1E04 /* AtProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 6C8C1B442CCBC5B900CB1E04 /* AtProtocol */; };
-		6C8C1B482CCBC5C600CB1E04 /* Vault in Frameworks */ = {isa = PBXBuildFile; productRef = 6C8C1B472CCBC5C600CB1E04 /* Vault */; };
-		6C8C1B4B2CCBC5E100CB1E04 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 6C8C1B4A2CCBC5E100CB1E04 /* Nuke */; };
-		6C8C1B4D2CCBC5E100CB1E04 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 6C8C1B4C2CCBC5E100CB1E04 /* NukeExtensions */; };
-		6C8C1B4F2CCBC5E100CB1E04 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6C8C1B4E2CCBC5E100CB1E04 /* NukeUI */; };
+		6C87BAD52D5450D7004C3337 /* AtProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 6C87BAD42D5450D7004C3337 /* AtProtocol */; };
+		6C87BAD82D5450F3004C3337 /* Vault in Frameworks */ = {isa = PBXBuildFile; productRef = 6C87BAD72D5450F3004C3337 /* Vault */; };
+		6C87BADB2D54511A004C3337 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 6C87BADA2D54511A004C3337 /* Nuke */; };
+		6C87BADD2D54511A004C3337 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 6C87BADC2D54511A004C3337 /* NukeExtensions */; };
+		6C87BADF2D54511A004C3337 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6C87BADE2D54511A004C3337 /* NukeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,14 +49,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C6E5EF22D3866C7000A0C54 /* AtProtocol in Frameworks */,
-				6C6E5EF52D3866F2000A0C54 /* AtProtocol in Frameworks */,
-				6C8C1B4F2CCBC5E100CB1E04 /* NukeUI in Frameworks */,
-				6C16B0AB2CD2DC7600202196 /* AtProtocol in Frameworks */,
-				6C8C1B4B2CCBC5E100CB1E04 /* Nuke in Frameworks */,
-				6C8C1B4D2CCBC5E100CB1E04 /* NukeExtensions in Frameworks */,
-				6C8C1B452CCBC5B900CB1E04 /* AtProtocol in Frameworks */,
-				6C8C1B482CCBC5C600CB1E04 /* Vault in Frameworks */,
+				6C87BADF2D54511A004C3337 /* NukeUI in Frameworks */,
+				6C87BADB2D54511A004C3337 /* Nuke in Frameworks */,
+				6C87BADD2D54511A004C3337 /* NukeExtensions in Frameworks */,
+				6C87BAD52D5450D7004C3337 /* AtProtocol in Frameworks */,
+				6C87BAD82D5450F3004C3337 /* Vault in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,14 +98,11 @@
 			);
 			name = SparroBlu;
 			packageProductDependencies = (
-				6C8C1B442CCBC5B900CB1E04 /* AtProtocol */,
-				6C8C1B472CCBC5C600CB1E04 /* Vault */,
-				6C8C1B4A2CCBC5E100CB1E04 /* Nuke */,
-				6C8C1B4C2CCBC5E100CB1E04 /* NukeExtensions */,
-				6C8C1B4E2CCBC5E100CB1E04 /* NukeUI */,
-				6C16B0AA2CD2DC7600202196 /* AtProtocol */,
-				6C6E5EF12D3866C7000A0C54 /* AtProtocol */,
-				6C6E5EF42D3866F2000A0C54 /* AtProtocol */,
+				6C87BAD42D5450D7004C3337 /* AtProtocol */,
+				6C87BAD72D5450F3004C3337 /* Vault */,
+				6C87BADA2D54511A004C3337 /* Nuke */,
+				6C87BADC2D54511A004C3337 /* NukeExtensions */,
+				6C87BADE2D54511A004C3337 /* NukeUI */,
 			);
 			productName = SparroBlu;
 			productReference = 6C8C1AB72CCBC42300CB1E04 /* SparroBlu.app */;
@@ -142,9 +133,9 @@
 			mainGroup = 6C8C1AAE2CCBC42200CB1E04;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				6C8C1B462CCBC5C600CB1E04 /* XCRemoteSwiftPackageReference "Vault" */,
-				6C8C1B492CCBC5E100CB1E04 /* XCRemoteSwiftPackageReference "Nuke" */,
-				6C6E5EF32D3866F2000A0C54 /* XCLocalSwiftPackageReference "../AtProtocol" */,
+				6C87BAD32D5450D7004C3337 /* XCRemoteSwiftPackageReference "atprotocol" */,
+				6C87BAD62D5450F3004C3337 /* XCRemoteSwiftPackageReference "Vault" */,
+				6C87BAD92D54511A004C3337 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6C8C1AB82CCBC42300CB1E04 /* Products */;
@@ -389,25 +380,26 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		6C6E5EF32D3866F2000A0C54 /* XCLocalSwiftPackageReference "../AtProtocol" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../AtProtocol;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
-		6C8C1B462CCBC5C600CB1E04 /* XCRemoteSwiftPackageReference "Vault" */ = {
+		6C87BAD32D5450D7004C3337 /* XCRemoteSwiftPackageReference "atprotocol" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SparrowTek/Vault.git";
+			repositoryURL = "https://github.com/sparrowtek/atprotocol";
+			requirement = {
+				branch = oauth;
+				kind = branch;
+			};
+		};
+		6C87BAD62D5450F3004C3337 /* XCRemoteSwiftPackageReference "Vault" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SparrowTek/Vault";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.2.0;
 			};
 		};
-		6C8C1B492CCBC5E100CB1E04 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+		6C87BAD92D54511A004C3337 /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Nuke.git";
+			repositoryURL = "https://github.com/kean/Nuke";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 12.8.0;
@@ -416,40 +408,29 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6C16B0AA2CD2DC7600202196 /* AtProtocol */ = {
+		6C87BAD42D5450D7004C3337 /* AtProtocol */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 6C87BAD32D5450D7004C3337 /* XCRemoteSwiftPackageReference "atprotocol" */;
 			productName = AtProtocol;
 		};
-		6C6E5EF12D3866C7000A0C54 /* AtProtocol */ = {
+		6C87BAD72D5450F3004C3337 /* Vault */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AtProtocol;
-		};
-		6C6E5EF42D3866F2000A0C54 /* AtProtocol */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AtProtocol;
-		};
-		6C8C1B442CCBC5B900CB1E04 /* AtProtocol */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AtProtocol;
-		};
-		6C8C1B472CCBC5C600CB1E04 /* Vault */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6C8C1B462CCBC5C600CB1E04 /* XCRemoteSwiftPackageReference "Vault" */;
+			package = 6C87BAD62D5450F3004C3337 /* XCRemoteSwiftPackageReference "Vault" */;
 			productName = Vault;
 		};
-		6C8C1B4A2CCBC5E100CB1E04 /* Nuke */ = {
+		6C87BADA2D54511A004C3337 /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6C8C1B492CCBC5E100CB1E04 /* XCRemoteSwiftPackageReference "Nuke" */;
+			package = 6C87BAD92D54511A004C3337 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
 		};
-		6C8C1B4C2CCBC5E100CB1E04 /* NukeExtensions */ = {
+		6C87BADC2D54511A004C3337 /* NukeExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6C8C1B492CCBC5E100CB1E04 /* XCRemoteSwiftPackageReference "Nuke" */;
+			package = 6C87BAD92D54511A004C3337 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeExtensions;
 		};
-		6C8C1B4E2CCBC5E100CB1E04 /* NukeUI */ = {
+		6C87BADE2D54511A004C3337 /* NukeUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6C8C1B492CCBC5E100CB1E04 /* XCRemoteSwiftPackageReference "Nuke" */;
+			package = 6C87BAD92D54511A004C3337 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeUI;
 		};
 /* End XCSwiftPackageProductDependency section */
