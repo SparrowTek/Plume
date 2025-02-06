@@ -127,7 +127,12 @@ struct LoginView: View {
         defer { requestInProgress = false }
         requestInProgress = true
         await services.run.update(hostURL: server.hostURL)
-        errorMessage = await services.run.login(identifier: userName, password: password)
+//        errorMessage = await services.run.login(identifier: userName, password: password)
+        do {
+            try await services.run.login(identifier: userName, password: password)
+        } catch {
+            print("LOGIN ERROR: \(error)")
+        }
     }
     
     private func triggerLogin() {

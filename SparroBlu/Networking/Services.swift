@@ -37,16 +37,17 @@ actor ServicesModelActor {
         await AtProtocol.updateTokens(access: accessToken, refresh: refreshToken)
     }
     
-    func login(identifier: String, password: String) async -> ErrorMessage? {
-        await performAPIRequest { [weak self] in
-            let session = try await AtProtocol.AtProtoLexicons().login(identifier: identifier, password: password)
-            try await self?.updateSession(session)
-        }
+    func login(identifier: String, password: String) async throws {
+//        await performAPIRequest { [weak self] in
+            try await AtProtocol.AtProtoLexicons().login(account: identifier, clientMetadataEndpoint: "https://sparrowtek.com/blu.json")
+//            let session = try await AtProtocol.AtProtoLexicons().login(identifier: identifier, password: password)
+//            try await self?.updateSession(session)
+//        }
     }
     
     func getCurrent() async {
-        guard let session = try? await AtProtocol.AtProtoLexicons().getCurrent() else { return }
-        try? await updateSession(session)
+//        guard let session = try? await AtProtocol.AtProtoLexicons().getCurrent() else { return }
+//        try? await updateSession(session)
     }
     
     private func updateSession(_ session: Session) async throws {
