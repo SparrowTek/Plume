@@ -34,6 +34,11 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		6C6381B12D91EBB200DA5FC6 /* ci_scripts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,7 @@
 		6C6380BF2D91E39600DA5FC6 = {
 			isa = PBXGroup;
 			children = (
+				6C6381B12D91EBB200DA5FC6 /* ci_scripts */,
 				6C6381682D91E66E00DA5FC6 /* Configurations */,
 				6C6380CA2D91E39600DA5FC6 /* plume */,
 				6C6380C92D91E39600DA5FC6 /* Products */,
@@ -82,6 +88,7 @@
 			fileSystemSynchronizedGroups = (
 				6C6380CA2D91E39600DA5FC6 /* plume */,
 				6C6381682D91E66E00DA5FC6 /* Configurations */,
+				6C6381B12D91EBB200DA5FC6 /* ci_scripts */,
 			);
 			name = Plume;
 			packageProductDependencies = (
