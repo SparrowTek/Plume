@@ -11,7 +11,7 @@ import SwiftUI
 struct PlumeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppPresenter()
         }
     }
 }
