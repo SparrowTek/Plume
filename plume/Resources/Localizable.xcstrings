@@ -4,6 +4,9 @@
     " " : {
 
     },
+    "BLANK" : {
+
+    },
     "HomePresenter()" : {
 
     },
@@ -11,9 +14,6 @@
 
     },
     "ONBOARDING" : {
-
-    },
-    "PLUME" : {
 
     },
     "ProfilePresenter()" : {

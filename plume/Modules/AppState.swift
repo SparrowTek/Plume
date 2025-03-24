@@ -20,4 +20,7 @@ class AppState {
     
     var route: Route = .main
     var tab: Tab = .home
+    
+    @ObservationIgnored
+    lazy var homeState = HomeState(parentState: self)
 }

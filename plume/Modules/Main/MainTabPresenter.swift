@@ -18,8 +18,8 @@ struct MainTabPresenter: View {
         ZStack {
             TabView(selection: $state.tab) {
                 Tab(value: AppState.Tab.home) {
-                    Text("HomePresenter()")
-//                        .environment(state.homeState)
+                    HomePresenter()
+                        .environment(state.homeState)
                 }
                 
                 Tab(value: AppState.Tab.search) {
