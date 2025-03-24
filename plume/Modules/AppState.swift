@@ -11,10 +11,13 @@ import SwiftUI
 @MainActor
 class AppState {
     enum Route {
-        case main
-        case onboarding
-        case splash
+        case main, onboarding, splash
+    }
+    
+    enum Tab {
+        case home, search, notifications, profile
     }
     
     var route: Route = .main
+    var tab: Tab = .home
 }

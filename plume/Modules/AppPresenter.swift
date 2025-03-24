@@ -18,7 +18,7 @@ struct AppPresenter: View {
         case .splash:
             Text("SPLASH")
         case .main:
-            Text("PLUME")
+            MainTabPresenter()
         }
     }
 }

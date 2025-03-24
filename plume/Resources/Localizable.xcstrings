@@ -1,7 +1,28 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Hello, World" : {
+    " " : {
+
+    },
+    "HomePresenter()" : {
+
+    },
+    "NotificationsPresenter()" : {
+
+    },
+    "ONBOARDING" : {
+
+    },
+    "PLUME" : {
+
+    },
+    "ProfilePresenter()" : {
+
+    },
+    "SearchPresenter()" : {
+
+    },
+    "SPLASH" : {
 
     }
   },
