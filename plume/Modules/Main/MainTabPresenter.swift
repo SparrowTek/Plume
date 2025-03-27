@@ -16,49 +16,37 @@ struct MainTabPresenter: View {
         @Bindable var state = state
         
         ZStack {
-            TabView(selection: $state.tab) {
-                Tab(value: AppState.Tab.home) {
-                    HomePresenter()
-                        .environment(state.homeState)
-                }
-                
-                Tab(value: AppState.Tab.search) {
-                    Text("SearchPresenter()")
-//                        .environment(state.searchState)
-                }
-                
-                Tab(value: AppState.Tab.notifications) {
-                    Text("NotificationsPresenter()")
-//                        .environment(state.notificationsState)
-                }
-                
-                Tab(value: AppState.Tab.profile) {
-                    Text("ProfilePresenter()")
-//                        .environment(state.profileState)
-                }
-                
-                // TODO: do I need these modifiers??
-//                .toolbarBackground(.visible, for: .tabBar)
-//                .toolbarBackground(Color.primaryWhite, for: .tabBar)
-            }
+            HomePresenter()
+                .environment(state.homeState)
+                .opacity(state.tab == .home ? 1 : 0)
             
-            VStack(spacing: 0) {
-                Spacer()
-                
-                HStack {
-                    createTab(for: .home)
-                    createTab(for: .search)
-                    createTab(for: .notifications)
-                    createTab(for: .profile)
-                }
-                .background(Color.primaryWhite)
-            }
-            .padding(.bottom)
-            .ignoresSafeArea()
+            Text("SEARCH")
+                .opacity(state.tab == .search ? 1 : 0)
             
+            Text("NOTIFICATIONS")
+                .opacity(state.tab == .notifications ? 1 : 0)
+            
+            Text("PROFILE")
+                .opacity(state.tab == .profile ? 1 : 0)
         }
+        .animation(.easeInOut, value: state.tab)
         .onChange(of: state.tab) { triggerSensoryFeedback.toggle() }
         .sensoryFeedback(.selection, trigger: triggerSensoryFeedback)
+        .overlay(PlumeTabBar(), alignment: .bottom)
+    }
+}
+
+fileprivate struct PlumeTabBar: View {
+    @Environment(AppState.self) private var state
+    
+    var body: some View {
+        HStack{
+            createTab(for: .home)
+            createTab(for: .search)
+            createTab(for: .notifications)
+            createTab(for: .profile)
+        }
+        .background(Color.primaryWhite)
     }
     
     private func createTab(for tab: AppState.Tab) -> some View {
