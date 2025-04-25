@@ -1,4 +1,4 @@
-# Sparro Blu
+# Plume
 A native At Protocol app for iOS developed with Swift and SwiftUI
 
 ## Project State
@@ -13,7 +13,7 @@ By participating in this project you agree to abide by the [Contributor Code of 
 
 ### Building
 
-**Note**: requires Xcode 15 and macOS 14
+**Note**: requires Xcode 16 and macOS 14
 
 - clone the repo
 - `cp User.xcconfig.template User.xcconfig`
