@@ -1,0 +1,33 @@
+{
+  "originHash" : "3d1e7129a887bfbd90a1d710007c849e0359d208f90d822aa7f7e0979cc9895c",
+  "pins" : [
+    {
+      "identity" : "atprotocol",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SparrowTek/AtProtocol.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ec224fa336ad5e24221338a521d119c2ed07fc5d"
+      }
+    },
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke",
+      "state" : {
+        "revision" : "0ead44350d2737db384908569c012fe67c421e4d",
+        "version" : "12.8.0"
+      }
+    },
+    {
+      "identity" : "vault",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SparrowTek/Vault",
+      "state" : {
+        "revision" : "25df48f62a5382c217cfe67f2a12e6efe8f60ec4",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}

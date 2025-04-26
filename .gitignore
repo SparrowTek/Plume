@@ -1,10 +1,7 @@
+#### macOS
 .DS_Store
-/Packages
+
+#### Xcode
 xcuserdata/
-DerivedData/
-Package.pins
-Package.resolved
-.swiftpm
-.build/
-*xcshareddata/
+
 User.xcconfig
